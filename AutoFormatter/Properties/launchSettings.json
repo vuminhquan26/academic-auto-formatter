@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "AutoFormatter (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "AutoFormatter (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

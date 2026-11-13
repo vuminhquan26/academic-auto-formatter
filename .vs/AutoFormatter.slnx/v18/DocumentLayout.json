@@ -1,0 +1,110 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\HUCE\\AutoFormatter\\AutoFormatter\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9BCB58ED-103D-BC4F-278B-7A96E107EB94}|AutoFormatter\\AutoFormatter.csproj|d:\\huce\\autoformatter\\autoformatter\\autoformatter\\docxengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BCB58ED-103D-BC4F-278B-7A96E107EB94}|AutoFormatter\\AutoFormatter.csproj|solutionrelative:autoformatter\\docxengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BCB58ED-103D-BC4F-278B-7A96E107EB94}|AutoFormatter\\AutoFormatter.csproj|d:\\huce\\autoformatter\\autoformatter\\autoformatter\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BCB58ED-103D-BC4F-278B-7A96E107EB94}|AutoFormatter\\AutoFormatter.csproj|solutionrelative:autoformatter\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BCB58ED-103D-BC4F-278B-7A96E107EB94}|AutoFormatter\\AutoFormatter.csproj|d:\\huce\\autoformatter\\autoformatter\\autoformatter\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9BCB58ED-103D-BC4F-278B-7A96E107EB94}|AutoFormatter\\AutoFormatter.csproj|solutionrelative:autoformatter\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BCB58ED-103D-BC4F-278B-7A96E107EB94}|AutoFormatter\\AutoFormatter.csproj|d:\\huce\\autoformatter\\autoformatter\\autoformatter\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9BCB58ED-103D-BC4F-278B-7A96E107EB94}|AutoFormatter\\AutoFormatter.csproj|solutionrelative:autoformatter\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BCB58ED-103D-BC4F-278B-7A96E107EB94}|AutoFormatter\\AutoFormatter.csproj|d:\\huce\\autoformatter\\autoformatter\\autoformatter\\formatconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BCB58ED-103D-BC4F-278B-7A96E107EB94}|AutoFormatter\\AutoFormatter.csproj|solutionrelative:autoformatter\\formatconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "D:\\HUCE\\AutoFormatter\\AutoFormatter\\AutoFormatter\\MainPage.xaml",
+              "RelativeDocumentMoniker": "AutoFormatter\\MainPage.xaml",
+              "ToolTip": "D:\\HUCE\\AutoFormatter\\AutoFormatter\\AutoFormatter\\MainPage.xaml",
+              "RelativeToolTip": "AutoFormatter\\MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-13T14:11:00.741Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DocxEngine.cs",
+              "DocumentMoniker": "D:\\HUCE\\AutoFormatter\\AutoFormatter\\AutoFormatter\\DocxEngine.cs",
+              "RelativeDocumentMoniker": "AutoFormatter\\DocxEngine.cs",
+              "ToolTip": "D:\\HUCE\\AutoFormatter\\AutoFormatter\\AutoFormatter\\DocxEngine.cs",
+              "RelativeToolTip": "AutoFormatter\\DocxEngine.cs",
+              "ViewState": "AgIAAEYCAAAAAAAAAAAqwF8CAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-12T16:10:31.977Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormatConfig.cs",
+              "DocumentMoniker": "D:\\HUCE\\AutoFormatter\\AutoFormatter\\AutoFormatter\\FormatConfig.cs",
+              "RelativeDocumentMoniker": "AutoFormatter\\FormatConfig.cs",
+              "ToolTip": "D:\\HUCE\\AutoFormatter\\AutoFormatter\\AutoFormatter\\FormatConfig.cs",
+              "RelativeToolTip": "AutoFormatter\\FormatConfig.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAA2wEoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-12T16:07:17.011Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\HUCE\\AutoFormatter\\AutoFormatter\\AutoFormatter\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "AutoFormatter\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\HUCE\\AutoFormatter\\AutoFormatter\\AutoFormatter\\MainWindow.xaml.cs",
+              "RelativeToolTip": "AutoFormatter\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAmwIIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-12T16:02:41.72Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\HUCE\\AutoFormatter\\AutoFormatter\\AutoFormatter\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "AutoFormatter\\MainWindow.xaml",
+              "ToolTip": "D:\\HUCE\\AutoFormatter\\AutoFormatter\\AutoFormatter\\MainWindow.xaml",
+              "RelativeToolTip": "AutoFormatter\\MainWindow.xaml",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAkwIYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-12T16:02:30.174Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

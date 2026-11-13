@@ -1,0 +1,1 @@
+D:\HUCE\AutoFormatter\AutoFormatter\AutoFormatter\AutoFormatter.csproj;x64

@@ -1,0 +1,135 @@
+<Window
+    x:Class="AutoFormatter.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Auto-Formatter Academic Edition">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer Margin="30">
+            <StackPanel Spacing="15" MaxWidth="800" HorizontalAlignment="Center">
+
+                <TextBlock Text="CÔNG CỤ CHUẨN HÓA BÁO CÁO TOÀN DIỆN" FontSize="26" FontWeight="Bold" HorizontalAlignment="Center" Foreground="{ThemeResource SystemAccentColor}" Margin="0,0,0,10"/>
+
+                <Border x:Name="DropZone" Height="100" BorderBrush="{ThemeResource SystemAccentColor}" 
+                        BorderThickness="2" CornerRadius="8" Background="{ThemeResource ControlFillColorDefaultBrush}"
+                        AllowDrop="True" DragOver="DropZone_DragOver" Drop="DropZone_Drop">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10">
+                        <TextBlock x:Name="TxtFileName" Text="Kéo thả file Word báo cáo (.docx) vào đây" FontSize="16" FontWeight="SemiBold"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- MODULE TẠO BÌA TỰ ĐỘNG -->
+                <Expander Header="0. Tự động vẽ Trang Bìa chuẩn (Tùy chọn)" IsExpanded="True" HorizontalAlignment="Stretch">
+                    <StackPanel Spacing="10">
+                        <ToggleSwitch x:Name="TgGenCover" Header="Bật tính năng tự sinh trang bìa" IsOn="True"/>
+                        <ToggleSwitch x:Name="TgPageBorder" Header="Tự động vẽ khung trang bìa đôi (Page Border)" IsOn="True"/>
+                        <Grid ColumnSpacing="15" RowSpacing="15">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBox x:Name="TxtUni" Header="Tên Trường" Text="TRƯỜNG ĐẠI HỌC XÂY DỰNG HÀ NỘI" Grid.Row="0" Grid.Column="0"/>
+                            <TextBox x:Name="TxtFaculty" Header="Tên Khoa/Bộ môn" Text="KHOA CÔNG NGHỆ THÔNG TIN" Grid.Row="0" Grid.Column="1"/>
+
+                            <TextBox x:Name="TxtReportType" Header="Loại Báo Cáo" Text="BÁO CÁO BÀI TẬP LỚN" Grid.Row="1" Grid.Column="0"/>
+                            <TextBox x:Name="TxtLocation" Header="Địa điểm, thời gian" Text="Hà Nội, năm 2026" Grid.Row="1" Grid.Column="1"/>
+
+                            <TextBox x:Name="TxtTopic" Header="Tên Đề Tài" Text="Phát triển hệ thống chuẩn hóa đồ án tự động" Grid.Row="2" Grid.ColumnSpan="2"/>
+
+                            <Grid Grid.Row="3" Grid.ColumnSpan="2" ColumnSpacing="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBox x:Name="TxtLogoPath" Header="Đường dẫn file Logo (.png)" IsReadOnly="True" Grid.Column="0"/>
+                                <Button x:Name="BtnBrowseLogo" Content="Chọn ảnh..." Grid.Column="1" VerticalAlignment="Bottom" Click="BtnBrowseLogo_Click"/>
+                            </Grid>
+
+                            <TextBox x:Name="TxtInstructor" Header="Giảng viên hướng dẫn" Text="ThS. Nguyễn Văn Long" Grid.Row="4" Grid.ColumnSpan="2"/>
+
+                            <!-- CHẾ ĐỘ LINH HOẠT: TỰ TẠO TRƯỜNG DỮ LIỆU -->
+                            <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Spacing="10" Margin="0,10,0,0">
+                                <TextBlock Text="THÔNG TIN NGƯỜI THỰC HIỆN:" FontWeight="Bold" Foreground="{ThemeResource SystemAccentColor}"/>
+                                <ToggleSwitch x:Name="TgIsGroup" Header="Đây là đồ án làm theo NHÓM" IsOn="False" Toggled="TgIsGroup_Toggled"/>
+                                <TextBox x:Name="TxtGroupName" Header="Tên nhóm (Tùy chọn)" Text="1" Visibility="Collapsed"/>
+
+                                <TextBox x:Name="TxtCommonFields" Header="Các trường thông tin tùy chọn (Mỗi dòng 1 thông tin. Cấu trúc: [Tên trường]: [Giá trị])" 
+                                         Text="Lớp: 62PM2&#x0a;Khóa: 14 (2024-2028)&#x0a;Hệ: Chính Quy" 
+                                         AcceptsReturn="True" Height="90" TextWrapping="Wrap"/>
+
+                                <TextBox x:Name="TxtStudentsData" Header="Danh sách Sinh viên (Mỗi người 1 dòng. Cấu trúc: Tên - Mã SV)" 
+                                         Text="Vũ Minh Quân - 123456&#x0a;Nguyễn Văn B - 654321" 
+                                         AcceptsReturn="True" Height="70" TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Expander>
+
+                <!-- CÁC CÀI ĐẶT FORMATTING (Giữ nguyên) -->
+                <Expander Header="1. Căn lề &amp; Khổ giấy" IsExpanded="False" HorizontalAlignment="Stretch">
+                    <StackPanel Spacing="15">
+                        <Grid ColumnSpacing="15">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <NumberBox x:Name="NumLeft" Header="Trái (cm)" Value="3.5" SpinButtonPlacementMode="Inline" SmallChange="0.5" Grid.Column="0"/>
+                            <NumberBox x:Name="NumRight" Header="Phải (cm)" Value="2.0" SpinButtonPlacementMode="Inline" SmallChange="0.5" Grid.Column="1"/>
+                            <NumberBox x:Name="NumTop" Header="Trên (cm)" Value="2.0" SpinButtonPlacementMode="Inline" SmallChange="0.5" Grid.Column="2"/>
+                            <NumberBox x:Name="NumBottom" Header="Dưới (cm)" Value="2.0" SpinButtonPlacementMode="Inline" SmallChange="0.5" Grid.Column="3"/>
+                        </Grid>
+                        <ToggleSwitch x:Name="TgTwoSided" Header="Chế độ in 2 mặt (Mirror Margins)" IsOn="True"/>
+                    </StackPanel>
+                </Expander>
+
+                <Expander Header="2. Định dạng Văn bản &amp; Tiêu đề" IsExpanded="False" HorizontalAlignment="Stretch">
+                    <StackPanel Spacing="15">
+                        <StackPanel Orientation="Horizontal" Spacing="30">
+                            <ComboBox x:Name="CboFont" Header="Tên Font" SelectedIndex="0" Width="250">
+                                <x:String>Times New Roman</x:String>
+                                <x:String>Arial</x:String>
+                            </ComboBox>
+                            <NumberBox x:Name="NumFontSize" Header="Cỡ chữ chuẩn" Value="13" SpinButtonPlacementMode="Inline" Width="150"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Spacing="30">
+                            <ToggleSwitch x:Name="TgSpacing" Header="Ép giãn dòng toàn văn bản" IsOn="True" VerticalAlignment="Center"/>
+                            <NumberBox x:Name="NumLineSpacing" Header="Mức giãn dòng (Multiple)" Value="1.5" SpinButtonPlacementMode="Inline" SmallChange="0.1" Width="150"/>
+                        </StackPanel>
+                        <ToggleSwitch x:Name="TgHeadings" Header="Tự động nhận diện &amp; Format Tiểu mục" IsOn="True"/>
+                    </StackPanel>
+                </Expander>
+
+                <Expander Header="3. Tối ưu Cấu trúc &amp; Danh mục" IsExpanded="False" HorizontalAlignment="Stretch">
+                    <StackPanel Spacing="10">
+                        <ToggleSwitch x:Name="TgTableFigure" Header="Ép Hình vẽ/Bảng biểu căn giữa &amp; Thu gọn ≤ 75%" IsOn="True"/>
+                        <ToggleSwitch x:Name="TgEquation" Header="Đóng gói Phương trình vào bảng 3 cột" IsOn="True"/>
+                        <ToggleSwitch x:Name="TgReference" Header="Sửa lỗi thụt lề Tài liệu tham khảo" IsOn="True"/>
+                        <Border BorderBrush="LightGray" BorderThickness="0,1,0,0" Margin="0,10,0,10"/>
+                        <ToggleSwitch x:Name="TgTOC" Header="Tạo Mục lục (TOC)" IsOn="True"/>
+                        <ToggleSwitch x:Name="TgTOF" Header="Tạo Danh mục Hình vẽ" IsOn="True"/>
+                        <ToggleSwitch x:Name="TgTOT" Header="Tạo Danh mục Bảng biểu" IsOn="True"/>
+                    </StackPanel>
+                </Expander>
+
+                <Button x:Name="BtnStart" Content="⚡ CHUẨN HÓA &amp; XUẤT FILE" Style="{ThemeResource AccentButtonStyle}" 
+                        HorizontalAlignment="Stretch" Height="50" Margin="0,20,0,0" FontSize="18" FontWeight="SemiBold" Click="BtnStart_Click"/>
+
+                <ProgressBar x:Name="ProgBar" IsIndeterminate="True" Visibility="Collapsed"/>
+                <TextBlock x:Name="TxtStatus" Text="Trạng thái: Đang chờ file..." Foreground="Gray" FontStyle="Italic" HorizontalAlignment="Center"/>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
